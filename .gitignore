@@ -1,0 +1,4 @@
+selfjobs/*
+*.*.pyc
+py_codes/__pycache__/
+py_codes_cp/*

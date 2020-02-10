@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# File              : selfE.py
+# Author            : Hao Zhang <hzhangphys@gmail.com>
+# Date              : 02.09.2020
+# Last Modified Date: 02.09.2020
+# Last Modified By  : Hao Zhang <hzhangphys@gmail.com>
+# -*- coding: utf-8 -*-
 """
 Created on Tue Jan  7 23:00:46 2020
 
@@ -15,6 +21,8 @@ import pycuba
 
 # the convergence factor for the integrand of cubic vertex
 cov_fact = 0.1
+spinsize = paras.spinsize
+J_ex = paras.J_ex
 
 def print_header(name):
   print('-------------------- %s test -------------------' % name)
@@ -115,9 +123,5 @@ def hartree_fock(q):
     epsilonk4 = (uk**2 + vk**2) * deltaAk - 2.0*uk*vk*deltaBk
     
     return epsilonk4
-    
-    
-        
-        
-        
+
         
