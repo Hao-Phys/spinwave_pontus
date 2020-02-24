@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# File              : main_onshell.py
+# Author            : Hao Zhang <hzhangphys@gmail.com>
+# Date              : 02.10.2020
+# Last Modified Date: 02.10.2020
+# Last Modified By  : Hao Zhang <hzhangphys@gmail.com>
+# -*- coding: utf-8 -*-
 """
 Created on Tue Jan  7 23:36:46 2020
 
@@ -25,7 +31,7 @@ num = inM[0]
 q = np.array([inM[1], inM[2]])
 omegaq_lsw = LSW.eigenvalue(q)
 
-outFile = 'selfE.txt'
+outFile = 'selfE_0.25.txt'
 f = open(outFile, 'w')
 """
 selfE.txt 
