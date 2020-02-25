@@ -3,7 +3,7 @@
 # File              : main_HF.py
 # Author            : Hao Zhang <hzhangphys@gmail.com>
 # Date              : 02.09.2020
-# Last Modified Date: 02.09.2020
+# Last Modified Date: 02.24.2020
 # Last Modified By  : Hao Zhang <hzhangphys@gmail.com>
 import numpy as np
 import LSW
@@ -12,6 +12,7 @@ import cob
 import pycuba
 
 spinsize = paras.spinsize
+spin_eff = paras.spin_eff
 J_ex = paras.J_ex
 
 def print_header(name):
@@ -31,7 +32,7 @@ def integrand_HF(ndim, xx, ncomp, ff, userdata):
     q = np.array([q1, q2])
     k = np.zeros(2)
     k[0], k[1] = cob.k12tokxy(q[0], q[1])
-    omegak = LSW.eigenvalue(q)/(3.0*J_ex*spinsize)
+    omegak = LSW.eigenvalue(q)/(3.0*J_ex*spin_eff)
     gammak = LSW.gammak(k) 
     
     ff[0] = 1.0/omegak

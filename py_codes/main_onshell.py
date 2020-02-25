@@ -3,7 +3,7 @@
 # File              : main_onshell.py
 # Author            : Hao Zhang <hzhangphys@gmail.com>
 # Date              : 02.10.2020
-# Last Modified Date: 02.10.2020
+# Last Modified Date: 02.23.2020
 # Last Modified By  : Hao Zhang <hzhangphys@gmail.com>
 # -*- coding: utf-8 -*-
 """
@@ -31,7 +31,7 @@ num = inM[0]
 q = np.array([inM[1], inM[2]])
 omegaq_lsw = LSW.eigenvalue(q)
 
-outFile = 'selfE_0.25.txt'
+outFile = 'selfE_rescale_heisen.txt'
 f = open(outFile, 'w')
 """
 selfE.txt 

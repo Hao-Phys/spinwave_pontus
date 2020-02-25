@@ -3,7 +3,7 @@
 # File              : selfE.py
 # Author            : Hao Zhang <hzhangphys@gmail.com>
 # Date              : 02.09.2020
-# Last Modified Date: 02.09.2020
+# Last Modified Date: 02.23.2020
 # Last Modified By  : Hao Zhang <hzhangphys@gmail.com>
 # -*- coding: utf-8 -*-
 """
@@ -116,9 +116,11 @@ def hartree_fock(q):
     k = np.zeros((2, 1))
     k[0], k[1] = cob.k12tokxy(q[0], q[1])
     gamma_k = LSW.gammak(k)
-    deltaAk = 1.5*J_ex * (Xiplus*gamma_k + Xizz)
-    deltaBk = - 3.0*J_ex * (0.5*Ximinus*gamma_k + Xiprime)
-    
+    # deltaAk = 1.5*J_ex * (Xiplus*gamma_k + Xizz)
+    # deltaBk = - 3.0*J_ex * (0.5*Ximinus*gamma_k + Xiprime)
+    deltaAk = 3.0*J_ex*(Xiplus*gamma_k + Xizz)
+    deltaBk = -3.0*J_ex*(Ximinus*gamma_k + Xiprime) 
+
     uk, vk = LSW.eigenvector(q)
     epsilonk4 = (uk**2 + vk**2) * deltaAk - 2.0*uk*vk*deltaBk
     
